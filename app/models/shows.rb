@@ -4,6 +4,7 @@ class Show < ActiveRecord::Base
   end 
   
   def Show::most_popular_show
+    Show.maximun(rating: :desc).first
   end 
   
   def Show::lowest_rating
@@ -18,5 +19,6 @@ class Show < ActiveRecord::Base
   def Show::popular_shows
   end 
   
-  def 
+  def Show::shows_by_alphabetical_order
+  end 
 end 
